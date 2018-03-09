@@ -7,7 +7,14 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+import Vue from 'vue';
+
+// If you do not want tree-shaking, you can simply do this.
+// This will include all of the Element UI components and CSS
+//
+// import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
+// Vue.use(ElementUI);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -16,6 +23,15 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+
+Vue.component('navbar-component', require('./components/NavbarComponent.vue'));
+Vue.component('input-component', require('./components/InputComponent.vue'));
+
+import { Container, Header, Main, Footer } from 'element-ui';
+Vue.use(Container);
+Vue.use(Header);
+Vue.use(Main);
+Vue.use(Footer);
 
 const app = new Vue({
     el: '#app'

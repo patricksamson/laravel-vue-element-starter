@@ -1,8 +1,8 @@
 <?php
 
-namespace LVE-Starter\Http\Controllers\Auth;
+namespace Starter\Http\Controllers\Auth;
 
-use LVE-Starter\Http\Controllers\Controller;
+use Starter\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -29,8 +29,6 @@ class LoginController extends Controller
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {

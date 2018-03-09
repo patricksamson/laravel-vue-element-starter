@@ -1,6 +1,6 @@
 <?php
 
-namespace LVE-Starter\Providers;
+namespace Starter\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,20 +13,16 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'LVE-Starter\Events\Event' => [
-            'LVE-Starter\Listeners\EventListener',
+        'Starter\Events\Event' => [
+            'Starter\Listeners\EventListener',
         ],
     ];
 
     /**
      * Register any events for your application.
-     *
-     * @return void
      */
     public function boot()
     {
         parent::boot();
-
-        //
     }
 }

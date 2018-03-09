@@ -24,7 +24,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "LVE-Starter\\": "app/"
+            "Starter\\": "app/"
         }
     },
     "autoload-dev": {

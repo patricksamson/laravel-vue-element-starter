@@ -25,14 +25,27 @@ import Vue from 'vue';
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 Vue.component('navbar-component', require('./components/NavbarComponent.vue'));
-Vue.component('input-component', require('./components/InputComponent.vue'));
 
-import { Container, Header, Main, Footer } from 'element-ui';
+Vue.component('input-component', require('./components/InputComponent.vue'));
+Vue.component('textarea-component', require('./components/TextAreaComponent.vue'));
+Vue.component('date-component', require('./components/DateComponent.vue'));
+
+// Import and use the English locale
+import lang from 'element-ui/lib/locale/lang/en';
+import locale from 'element-ui/lib/locale';
+locale.use(lang);
+
+import { Container, Header, Main, Footer, Form } from 'element-ui';
 Vue.use(Container);
 Vue.use(Header);
 Vue.use(Main);
 Vue.use(Footer);
 
+Vue.use(Form);
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+        test: 'Enter your name'
+    }
 });

@@ -12,12 +12,12 @@ let mix = require('laravel-mix');
  */
 
 // You can comment this out if you do not need to analyse the compiled bundles
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+/*var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 mix.webpackConfig({
   plugins: [
      new BundleAnalyzerPlugin(),
   ]
-});
+});*/
 
 mix.js('resources/assets/js/app.js', 'public/js')
     .extract(['axios', 'vue']) // Do not extract 'element-ui', or the tree-shaking will be disabled!

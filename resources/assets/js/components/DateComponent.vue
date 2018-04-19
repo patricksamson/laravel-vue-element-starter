@@ -1,37 +1,32 @@
 <template>
     <el-form-item :label="label" label-position="right">
-        <el-input
-            :type="type"
+        <el-date-picker
             :name="name"
             :label="label"
-            :placeholder="placeholder"
+            format="yyyy-MM-dd"
+            value-format="yyyy-MM-dd"
             v-model="fieldValue"
             @change.native="emitFieldValueChangeEvent">
-        </el-input>
+        </el-date-picker>
     </el-form-item>
 </template>
 
 <script>
-    import { FormItem, Input } from 'element-ui';
+    import { FormItem, DatePicker } from 'element-ui';
 
     export default {
-        name: 'input-component',
+        name: 'date-component',
         components: {
             'el-form-item': FormItem,
-            'el-input': Input
+            'el-date-picker': DatePicker
         },
         model: {
             prop: 'fieldValue',
             event: 'change'
         },
         props: {
-            type: {
-                type: String,
-                default: 'test'
-            },
             name: String,
             label: String,
-            placeholder: String,
             fieldValue: [String, Number]
         },
         mounted() {

@@ -21,11 +21,29 @@
                 <el-main>
                     <h1>{{ config('app.name') }}</h1>
 
-                    <input-component></input-component>
+                    <el-form label-width="120px">
+
+                        <input-component
+                            name="input"
+                            label="this is a text field where you should enter your first name" :placeholder="test">
+                        </input-component>
+
+                        <textarea-component
+                            name="textarea"
+                            label="this is a text field"
+                            :placeholder="test">
+                        </textarea-component>
+
+                        <date-component
+                            name="date"
+                            label="this is a date field">
+                        </date-component>
+
+                    </el-form>
                 </el-main>
 
                 <el-footer>
-                    Footer
+                    ©2018 Les Idées de Fous Inc.
                 </el-footer>
             </el-container>
 

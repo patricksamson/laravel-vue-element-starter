@@ -1,7 +1,8 @@
 <template>
     <el-form-item :label="label" label-position="right">
         <el-input
-            :type="type"
+            type="textarea"
+            :autosize="{ minRows: 2, maxRows: 4}"
             :name="name"
             :label="label"
             :placeholder="placeholder"
@@ -15,7 +16,7 @@
     import { FormItem, Input } from 'element-ui';
 
     export default {
-        name: 'input-component',
+        name: 'textarea-component',
         components: {
             'el-form-item': FormItem,
             'el-input': Input
@@ -25,10 +26,6 @@
             event: 'change'
         },
         props: {
-            type: {
-                type: String,
-                default: 'test'
-            },
             name: String,
             label: String,
             placeholder: String,

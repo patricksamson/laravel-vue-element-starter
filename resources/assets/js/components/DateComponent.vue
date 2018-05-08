@@ -6,7 +6,7 @@
             format="yyyy-MM-dd"
             value-format="yyyy-MM-dd"
             v-model="fieldValue"
-            @change.native="emitFieldValueChangeEvent">
+            @change="emitFieldValueChangeEvent">
         </el-date-picker>
     </el-form-item>
 </template>

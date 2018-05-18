@@ -39,6 +39,20 @@
                             label="this is a date field">
                         </date-component>
 
+                        <select-component
+                            name="select"
+                            label="this is a select field"
+                            placeholder="Please choose"
+                            :options="[{value: 'Option1', label: 'Option1'}, {value: 'Option2', label: 'Option2'}]">
+                        </select-component>
+
+                        <switch-component
+                            name="switch"
+                            label="this is a switch field"
+                            active-text="On"
+                            inactive-text="Off">
+                        </switch-component>
+
                     </el-form>
                 </el-main>
 

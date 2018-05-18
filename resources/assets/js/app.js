@@ -29,6 +29,8 @@ Vue.component('navbar-component', require('./components/NavbarComponent.vue'));
 Vue.component('input-component', require('./components/InputComponent.vue'));
 Vue.component('textarea-component', require('./components/TextAreaComponent.vue'));
 Vue.component('date-component', require('./components/DateComponent.vue'));
+Vue.component('select-component', require('./components/SelectComponent.vue'));
+Vue.component('switch-component', require('./components/SwitchComponent.vue'));
 
 // Import and use the English locale
 import lang from 'element-ui/lib/locale/lang/en';

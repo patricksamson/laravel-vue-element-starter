@@ -25,35 +25,58 @@
 
                         <input-component
                             name="input"
-                            label="this is a text field where you should enter your first name" :placeholder="test">
+                            label="this is a text field where you should enter your first name"
+                            :placeholder="test"
+                            :required="true"
+                            :disabled="false"
+                            :errors="test">
                         </input-component>
 
                         <textarea-component
                             name="textarea"
                             label="this is a text field"
-                            :placeholder="test">
+                            :placeholder="test"
+                            :required="true"
+                            :disabled="false"
+                            :errors="test">
                         </textarea-component>
 
                         <date-component
                             name="date"
-                            label="this is a date field">
+                            label="this is a date field"
+                            :required="true"
+                            :disabled="false"
+                            :errors="test">
                         </date-component>
 
                         <select-component
                             name="select"
                             label="this is a select field"
                             placeholder="Please choose"
-                            :options="[{value: 'Option1', label: 'Option1'}, {value: 'Option2', label: 'Option2'}]">
+                            :options="[{value: 'Option1', label: 'Option1'}, {value: 'Option2', label: 'Option2'}]"
+                            :required="true"
+                            :disabled="false"
+                            :errors="test">
                         </select-component>
 
                         <switch-component
                             name="switch"
                             label="this is a switch field"
                             active-text="On"
-                            inactive-text="Off">
+                            inactive-text="Off"
+                            :required="true"
+                            :disabled="false"
+                            :errors="test">
                         </switch-component>
 
                     </el-form>
+
+                    <br>
+
+                    <form-component
+                        title="Test Form">
+                        <h2 slot="title" style="color: teal;">Well, hello there!</h2>
+                    </form-component>
                 </el-main>
 
                 <el-footer>

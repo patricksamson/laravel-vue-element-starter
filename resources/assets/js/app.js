@@ -26,6 +26,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 
 Vue.component('navbar-component', require('./components/NavbarComponent.vue'));
 
+Vue.component('form-component', require('./components/FormComponent.vue'));
+
 Vue.component('input-component', require('./components/InputComponent.vue'));
 Vue.component('textarea-component', require('./components/TextAreaComponent.vue'));
 Vue.component('date-component', require('./components/DateComponent.vue'));

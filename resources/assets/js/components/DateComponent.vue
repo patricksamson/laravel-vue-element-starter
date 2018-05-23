@@ -1,10 +1,14 @@
 <template>
-    <el-form-item :label="label" label-position="right">
+    <el-form-item
+        :label="label"
+        label-position="right"
+        :required="required">
         <el-date-picker
             :name="name"
             :label="label"
             format="yyyy-MM-dd"
             value-format="yyyy-MM-dd"
+            :disabled="disabled"
             v-model="fieldValue"
             @change="emitFieldValueChangeEvent">
         </el-date-picker>
@@ -27,7 +31,20 @@
         props: {
             name: String,
             label: String,
-            fieldValue: [String, Number]
+            fieldValue: [String, Number],
+
+            /**
+             * Rules
+             */
+            // Add a little start next to the label.
+            required: {
+                type: Boolean,
+                default: false
+            },
+            disabled: {
+                type: Boolean,
+                default: false
+            },
         },
         mounted() {
             //console.log('Input mounted.')

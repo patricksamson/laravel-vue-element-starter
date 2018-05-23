@@ -1,11 +1,15 @@
 <template>
-    <el-form-item :label="label" label-position="right">
+    <el-form-item
+        :label="label"
+        label-position="right"
+        :required="required">
         <el-select
-            v-model="fieldValue"
             :name="name"
             :placeholder="placeholder"
             filterable="true"
             clearable="true"
+            :disabled="disabled"
+            v-model="fieldValue"
             @change="emitFieldValueChangeEvent">
             <el-option
                 v-for="item in options"
@@ -37,6 +41,19 @@
             placeholder: String,
             fieldValue: [String, Number],
             options: Array,
+
+            /**
+             * Rules
+             */
+            // Add a little start next to the label.
+            required: {
+                type: Boolean,
+                default: false
+            },
+            disabled: {
+                type: Boolean,
+                default: false
+            },
         },
         mounted() {
             //console.log('Input mounted.')

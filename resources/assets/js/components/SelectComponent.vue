@@ -6,8 +6,8 @@
         <el-select
             :name="name"
             :placeholder="placeholder"
-            filterable="true"
-            clearable="true"
+            :filterable="true"
+            :clearable="true"
             :disabled="disabled"
             v-model="fieldValue"
             @change="emitFieldValueChangeEvent">
@@ -25,7 +25,7 @@
     import { FormItem, Select, Option } from 'element-ui';
 
     export default {
-        name: 'input-component',
+        name: 'select-component',
         components: {
             'el-form-item': FormItem,
             'el-select': Select,

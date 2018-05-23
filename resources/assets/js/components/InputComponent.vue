@@ -5,7 +5,7 @@
         :required="required"
         :error="errors">
         <el-input
-            :type="type"
+            :type="nativeInputType"
             :name="name"
             :label="label"
             :placeholder="placeholder"
@@ -30,9 +30,9 @@
             event: 'change'
         },
         props: {
-            type: {
+            nativeInputType: {
                 type: String,
-                default: 'test'
+                default: 'text'
             },
             name: String,
             label: String,

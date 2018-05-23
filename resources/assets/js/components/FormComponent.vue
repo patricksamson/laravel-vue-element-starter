@@ -20,7 +20,7 @@
     import { Form, FormItem, Button } from 'element-ui';
 
     export default {
-        name: 'input-component',
+        name: 'form-component',
         components: {
             'el-form': Form,
             'el-form-item': FormItem,

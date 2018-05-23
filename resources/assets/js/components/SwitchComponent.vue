@@ -18,7 +18,7 @@
     import { FormItem, Switch } from 'element-ui';
 
     export default {
-        name: 'input-component',
+        name: 'switch-component',
         components: {
             'el-form-item': FormItem,
             'el-switch': Switch

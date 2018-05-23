@@ -3,7 +3,7 @@
         :label="label"
         label-position="right"
         :required="required"
-        :error="errors">
+        :error="errorMessage">
         <el-input
             :type="nativeInputType"
             :name="name"
@@ -52,7 +52,7 @@
                 default: false
             },
 
-            errors: {
+            errorMessage: {
                 type: String,
                 default: null
             }

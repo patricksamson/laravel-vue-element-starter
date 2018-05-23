@@ -2,7 +2,8 @@
     <el-form-item
         :label="label"
         label-position="right"
-        :required="required">
+        :required="required"
+        :error="errorMessage">
         <el-date-picker
             :name="name"
             :label="label"
@@ -45,6 +46,11 @@
                 type: Boolean,
                 default: false
             },
+
+            errorMessage: {
+                type: String,
+                default: null
+            }
         },
         mounted() {
             //console.log('Input mounted.')

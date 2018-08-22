@@ -53,7 +53,7 @@
 
             </div>
 
-            {{  errorBag.size }}
+            {{ errorBag.size }}
 
             {{ errorBag }}
 

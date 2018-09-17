@@ -83,6 +83,7 @@
                 default: function() {
                     return {
                         fields: [
+                            // TODO : Use Field instances
                             {
                                 name: 'testinput',
                                 label: 'Test Input',

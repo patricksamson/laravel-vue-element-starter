@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,15 +11,5 @@ let mix = require('laravel-mix');
  |
  */
 
-// You can comment this out if you do not need to analyse the compiled bundles
-/*var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-mix.webpackConfig({
-  plugins: [
-     new BundleAnalyzerPlugin(),
-  ]
-});*/
-
-mix.js('resources/assets/js/app.js', 'public/js')
-    .extract(['axios', 'vue']) // Do not extract 'element-ui', or the tree-shaking will be disabled!
-    .sass('resources/assets/sass/app.scss', 'public/css')
-    .disableNotifications();
+mix.js('resources/js/app.js', 'public/js')
+   .sass('resources/sass/app.scss', 'public/css');

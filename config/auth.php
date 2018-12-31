@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -66,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Starter\User::class,
+            'model' => LVE\User::class,
         ],
 
         // 'users' => [
@@ -97,4 +98,5 @@ return [
             'expire' => 60,
         ],
     ],
+
 ];

@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', 'FormController@getForm');
-Route::post('/', 'FormController@postForm');
-
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });

@@ -1,8 +1,8 @@
 <?php
 
-namespace Starter\Http\Controllers\Auth;
+namespace LVE\Http\Controllers\Auth;
 
-use Starter\Http\Controllers\Controller;
+use LVE\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller
@@ -29,6 +29,8 @@ class ResetPasswordController extends Controller
 
     /**
      * Create a new controller instance.
+     *
+     * @return void
      */
     public function __construct()
     {

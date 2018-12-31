@@ -1,7 +1,8 @@
 <?php
 
-namespace Starter\Providers;
+namespace LVE\Providers;
 
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -12,14 +13,18 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Starter\Model' => 'Starter\Policies\ModelPolicy',
+        'LVE\Model' => 'LVE\Policies\ModelPolicy',
     ];
 
     /**
      * Register any authentication / authorization services.
+     *
+     * @return void
      */
     public function boot()
     {
         $this->registerPolicies();
+
+        //
     }
 }

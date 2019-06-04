@@ -17,6 +17,6 @@
         "element-ui": "^2.2.1",
         "laravel-mix": "^2.0",
         "vue": "^2.5.7",
-        "webpack-bundle-analyzer": "^2.13.0"
+        "webpack-bundle-analyzer": "^3.3.2"
     }
 }
